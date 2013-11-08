@@ -9,6 +9,7 @@ im=im2double(rgb2gray(im));
 % gy = conv2(conv2(I,dy,'same'),s','same');
 
 initPtsObj=detectSURFFeatures(im,'NumOctaves',1,'NumScaleLevels',3);
+im=img(im);
 imshow(im);
 hold on
 location=initPtsObj.Location;
