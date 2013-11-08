@@ -81,11 +81,16 @@ Py=Py(tracked_,:);
 % time step all points existing in
 [Px,Py]=loc_rm_static_points(Px,Py,p_mv,p_del_pts);
 
+Px_org=Px.';
+Py_org=Py.';
+Px=diff(Px,[],2);
+Py=diff(Py,[],2);
 Px=Px.';% the column of U is different point in x axes, row of U is the time step
 Py=Py.';
 
 
-
+s_tracked_pts.optx=Px_org;
+s_tracked_pts.opty=Py_org;
 s_tracked_pts.ptx=Px;
 s_tracked_pts.pty=Py;
 
