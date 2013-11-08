@@ -38,6 +38,7 @@ videoObj=VideoReader(video_name);
 video_length=videoObj.NumberOfFrames;
 % video_length-frag_length+1
 for startid=1:1:video_length-frag_length+1
+    disp(sprintf( '%s_%d',videoObj.Name(1:end-4),startid));
     tracked_pts(startid)=loc_get_tracked_points(videoObj,startid,frag_length,p_surf_oct,p_surf_scl ,p_mv,p_del_pts);
     
 end

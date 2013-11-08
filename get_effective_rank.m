@@ -16,4 +16,7 @@ for i=l_singular:-1:1
     end
 end
 idx=ceil(idx/2);
+% if idx*2>size(M,1);
+%     idx=ceil(size(M,1)/2)-1;
+% end
 end
